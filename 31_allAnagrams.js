@@ -12,8 +12,14 @@ AllAnagrams("cat", ["act","dog","god","tac"]) should return: ["act", "tac"]
 Test your solution with mocha 31_allAnagrams.js
 */
 
-const allAnagrams = () => {
-    // Your code here
+const allAnagrams = (anagram, potentialAna) => {
+    anagram=anagram.split('')
+    for (var i = 0; i<=potentialAna; i++){
+        if (potentialAna[i]!= new RegExp(`${anagram}+`) ){
+            potentialAna.splice(i)
+        }
+    }
+
 }
 
 
