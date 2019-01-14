@@ -11,8 +11,16 @@ sample([1, 2, 3, 4, 5, 6], 3);
 => [1, 6, 2]
 */
 
-const sample = () => {
-//  Your code here
+function sample(array, amount) {
+  let ret_array = []
+  if (amount <= 1){
+    return array[0]
+  }else{
+    for (i = 0; i < amount; i++){
+    ret_array.push(array[i])
+    }
+  }
+  return ret_array
 }
 
 
@@ -34,3 +42,5 @@ describe('Sample', () => {
     assert.deepEqual(sample([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 11).sort(), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
   });
 });
+
+console.log(sample([5, 1, 2, 3, 4, 5, 6, 7, 8, 9],4))
